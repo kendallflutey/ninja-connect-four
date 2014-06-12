@@ -1,0 +1,4 @@
+function ConnectFourView() {
+
+  var setPlace
+}
