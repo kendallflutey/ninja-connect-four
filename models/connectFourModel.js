@@ -1,18 +1,17 @@
-function ConnectFourModel() {
+var ConnectFourModel = function() {
 
 	this.board = [[0,0,0,0,0,0,0],
-							 [0,0,0,0,0,0,0],
-							 [0,0,0,0,0,0,0],
-							 [0,0,0,0,0,0,0],
-							 [0,0,0,0,0,0,0],
-							 [0,0,0,0,0,0,0]];
+							 	[0,0,0,0,0,0,0],
+							 	[0,0,0,0,0,0,0],
+							 	[0,0,0,0,0,0,0],
+							 	[0,0,0,0,0,0,0],
+							 	[0,0,0,0,0,0,0]];
 
-	this.red = 1;
-	this.yellow = 2;
+
 
 };
 
-ConnectFourModel.prototype.UpdateCell = function(ColumnNumber, PlayerColour) {
+ConnectFourModel.prototype.UpdateCell = function(colId, PlayerColour) {
 	
 	var colNum = {
 		"column-1": 0,
@@ -24,12 +23,17 @@ ConnectFourModel.prototype.UpdateCell = function(ColumnNumber, PlayerColour) {
 		"column-7": 6
 	};
 
-	var LowZero = board.length();
+	var colorConverter = {
+			"red": 1,
+			"yellow": 2
+	}
+
+	var LowZero = 6;
 	
 	for(var i = LowZero; i > 0; i--) {
-		if board[i, column[ColumnNumber]] === 0 {
+		if(this.board[i, colNum[colId]] === 0) {
 			LowZero = i;
 		};
 	};
-	board[LowZero,column[ColumnNumber]] = PlayerColour;
+	this.board[LowZero,colNum[colId]] = colorConverter[PlayerColour];
 }; 

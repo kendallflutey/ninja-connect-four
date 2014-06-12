@@ -1,21 +1,21 @@
-var ConnectFourView = function(tableSelector) {
+$(document).ready(function() {
 
-
-  var click = function() 
-  {
-    $(tableSelector).on("click", function()
-    {
-      return $(this).attr("id");
-    };
+  var ConnectFourView = {
+  	placeCounter: function(colId) {
+    	$(colId).find("td.empty:last").removeClass("empty").addClass(colour);
+  	}
   }
 
+  var model = new ConnectFourModel();
+  var controller = new ConnectFourController(ConnectFourView, model);
 
 
-  var placeCounter = function()
-    {
-      var emptyCell = $(self).find("td.empty:last");
-      emptyCell.removeClass("empty");
-      emptyCell.addClass(colour);
-      return $(this).[whatever is inside .data-col];
-    }
-};
+$("table").on('click', function() {
+
+  var colId = $(this).prop('id');
+  controller.gameTurn(colId);
+
+});
+
+
+})
