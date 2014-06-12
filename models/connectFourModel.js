@@ -37,28 +37,3 @@ ConnectFourModel.prototype.UpdateCell = function(ColumnNumber, PlayerColour) {
 
 	// var LowZero = ColumnNumber.transpose.lastIndexOf("0")
 
-
-
-
-
-
-ConnectFourModel.prototype.GameState = function() {
-	// "recieve state from view via controller"
-	// "given state has someone won? based on my criteria below"
-	CheckColumn;
-	CheckRow;
-	CheckDiagonal;
-};
-
-function CheckColumn() {
-	for (var i = 1; i > 7; i++) {
-		$("#column-"+i).CheckTds
-	};
-
-	function CheckTds() {
-		if $("#column-1 td[data-row='1']").attr("class") === "red"
-			"this stuff!"
-		else if $("#column-1 td[data-row='1']").attr("class") === "yellow"
-	};
-
-};
