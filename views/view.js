@@ -9,4 +9,4 @@ function ConnectFourView(lowest_empty_cell, playerColor) {
 // };
 
 // this.buttonToRespondTo = document.querySelector(buttonToRespondTo);
-// this.imageToMove = document.querySelector(imageToMove);
+// this.imageToMove = document.querySelector(imageToMove); 

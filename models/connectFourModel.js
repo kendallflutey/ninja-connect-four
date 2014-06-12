@@ -5,7 +5,7 @@ this.location = 0;
 PirateShipModel.prototype.GetLocationOfShip = function() {
 this.location += 10;
 return this.location;
-}
+};
 
 function ConnectFourModel() {
 
@@ -21,8 +21,12 @@ ConnectFourModel.prototype.GameState = function() {
 
 function CheckColumn() {
 	for (var i = 1; i > 7; i++) {
-		
-		$("#column-"+i)
-
+		$("#column-"+i).CheckTds
 	};
-}
+
+	function CheckTds() {
+		this.('td .red').
+	};
+
+
+};
