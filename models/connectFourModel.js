@@ -1,14 +1,14 @@
 function ConnectFourModel() {
 
-	var board = [[0,0,0,0,0,0,0],
+	this.board = [[0,0,0,0,0,0,0],
 							 [0,0,0,0,0,0,0],
 							 [0,0,0,0,0,0,0],
 							 [0,0,0,0,0,0,0],
 							 [0,0,0,0,0,0,0],
-							 [1,0,0,0,0,0,0]];
+							 [0,0,0,0,0,0,0]];
 
-	var red = 1;
-	var yellow = 2;
+	this.red = 1;
+	this.yellow = 2;
 
 };
 
@@ -32,8 +32,4 @@ ConnectFourModel.prototype.UpdateCell = function(ColumnNumber, PlayerColour) {
 		};
 	};
 	board[LowZero,column[ColumnNumber]] = PlayerColour;
-};
-
-
-	// var LowZero = ColumnNumber.transpose.lastIndexOf("0")
-
+}; 
