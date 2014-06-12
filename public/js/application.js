@@ -1,12 +1,5 @@
-$(document).ready(function() {
+window.onload = function(){
 
-	var model = new ConnectFourModel();
-	var view = new ConnectFourView("#movePirateShip", "#pirateShipImage");
-	 
-	var controller = new ConnectFourController(model, view);
+  var view = new ConnectFourView("table");
 
-});
-
-
-
-
+}
