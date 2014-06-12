@@ -22,3 +22,4 @@ self.view.SetLocationOfShip(locationOfShip);
 
  	$("columnID").call(view).on('click', );
  };
+ 
