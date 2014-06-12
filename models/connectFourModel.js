@@ -25,8 +25,9 @@ function CheckColumn() {
 	};
 
 	function CheckTds() {
-		this.('td .red').
+		if $("#column-1 td[data-row='1']").attr("class") === "red"
+			"this stuff!"
+		else if $("#column-1 td[data-row='1']").attr("class") === "yellow"
 	};
-
 
 };
