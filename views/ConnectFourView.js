@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
   var ConnectFourView = {
-  	placeCounter: function(colId) {
-    	$(colId).find("td.empty:last").removeClass("empty").addClass(colour);
+  	placeCounter: function(colId, colour) {
+    	$("#" + colId).find("td.empty:last").removeClass("empty").addClass(colour);
   	}
   }
 
@@ -10,12 +10,11 @@ $(document).ready(function() {
   var controller = new ConnectFourController(ConnectFourView, model);
 
 
-$("table").on('click', function() {
+  $("table").on('click', function() {
 
-  var colId = $(this).prop('id');
-  controller.gameTurn(colId);
+    var colId = $(this).prop('id');
+    controller.gameTurn(colId);
 
-});
-
+  });
 
 })
