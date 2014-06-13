@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     cursor: url('images/cursor.png'), auto;
+    background-color: #2990C5;
     }
 
 #container {
@@ -8,7 +9,26 @@ html, body {
 	width: 750px;
 	position: absolute;
 	left: 250px;
-	top: 25px;
+	top: 50px;
+}
+
+#boy{
+	position: absolute;
+	right: 0px;
+	bottom:-80px;
+}
+
+#girl{
+	position: absolute;
+	bottom: 50px;
+	left: 0px;
+}
+
+#logo	{
+	top: 0px;
+	position: absolute;
+	left: 250px;
+	top: 0px;
 }
 
 table {
