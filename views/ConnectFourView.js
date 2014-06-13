@@ -6,6 +6,10 @@ $(document).ready(function() {
   	},
     announceWinner: function(winner) {
       alert(winner + " is the winner!")
+    },
+    reset: function() {
+      $("td.red").removeClass("red").addClass("empty");
+      $("td.yellow").removeClass("yellow").addClass("empty");
     }
   }
 
@@ -17,7 +21,10 @@ $(document).ready(function() {
 
     var colId = $(this).prop('id');
     controller.gameTurn(colId);
-
+    if(typeof controller.winner !== "undefined")
+    {
+      controller.reset();
+    }
   });
 
 })

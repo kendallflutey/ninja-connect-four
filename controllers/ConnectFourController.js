@@ -11,8 +11,10 @@ ConnectFourController.prototype.gameTurn = function(colId) {
   this.view.placeCounter(colId, colour);
   this.model.UpdateCell(colId, colour);
   var winner = this.model.Winner(colour);
+  this.winner = winner;
   if(typeof winner !== "undefined"){
     this.view.announceWinner(winner)
+    this.reset();
   }
 };
 
@@ -25,3 +27,9 @@ ConnectFourController.prototype.setPlayerColour = function() {
     }
 }
 
+ConnectFourController.prototype.reset = function() {
+  this.view.reset();
+  this.model.reset();
+  this.turns = 0;
+  this.winner = undefined;
+}
