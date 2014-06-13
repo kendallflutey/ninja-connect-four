@@ -1,22 +1,51 @@
+html, body {
+    height: 100%;
+    cursor: url('images/cursor.png'), auto;
+    background-color: #2990C5;
+    }
+
 #container {
 	padding-top: 100px;
-	width: 50%;
-	margin: 0 auto;
+	width: 750px;
+	position: absolute;
+	left: 250px;
+	top: 50px;
+}
+
+#boy{
+	position: absolute;
+	right: 0px;
+	bottom:-80px;
+}
+
+#girl{
+	position: absolute;
+	bottom: 50px;
+	left: 0px;
+}
+
+#logo	{
+	top: 0px;
+	position: absolute;
+	left: 250px;
+	top: 0px;
 }
 
 table {
 	float: left;
-	background-color: blue;
+	background-color: #2788B9;
 }
 
 td {
-	width: 50px;
-	height: 50px;
+	width: 100px;
+	height: 100px;
+	background-color: #2788B9;
 }
 
 .empty {
 	background-image: url('images/empty.png');
 	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 
